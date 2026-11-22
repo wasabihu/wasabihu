@@ -18,7 +18,7 @@ Building practical **AI Agent infrastructure**, **audit-grade RAG corpora**, **b
 | Corpus | Coverage & Format | License |
 | :--- | :--- | :--- |
 | **[corpus-cn-statutes](https://github.com/wasabihu/corpus-cn-statutes)** | 29 PRC civil, commercial, company & capital-market statutes split verbatim into 3,204 one-file-per-article Markdown documents with SHA-256 `MANIFEST.tsv`. | `CC0-1.0` |
-| **[corpus-clinical-trials](https://github.com/wasabihu/corpus-clinical-trials)** | 55 quantitative clinical trial outcome records (271 Markdown pipe tables) from US NIH ClinicalTrials.gov v2 and Europe PMC Open Access JATS XML. | `CC0-1.0` / `CC-BY-4.0` |
+| **[corpus-clinical-trials](https://github.com/wasabihu/corpus-clinical-trials)** | 55 quantitative clinical trial outcome records (271 Markdown pipe tables) from US NIH ClinicalTrials.gov v2 and Europe PMC Open Access JATS XML. | `US-gov PD (NLM)` / `CC-BY-4.0` |
 
 ---
 
