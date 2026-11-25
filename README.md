@@ -20,6 +20,13 @@ Building practical **AI Agent infrastructure**, **audit-grade RAG corpora**, **b
 | **[corpus-cn-statutes](https://github.com/wasabihu/corpus-cn-statutes)** | 29 PRC civil, commercial, company & capital-market statutes split verbatim into 3,204 one-file-per-article Markdown documents with SHA-256 `MANIFEST.tsv`. | `CC0-1.0` |
 | **[corpus-clinical-trials](https://github.com/wasabihu/corpus-clinical-trials)** | 55 quantitative clinical trial outcome records (271 Markdown pipe tables) from US NIH ClinicalTrials.gov v2 and Europe PMC Open Access JATS XML. | `US-gov PD (NLM)` / `CC-BY-4.0` |
 
+### Clean-Room Open Models (Hugging Face)
+
+| Model | What it does | License |
+| :--- | :--- | :--- |
+| **[xerj-bilingual-fin-law-384](https://huggingface.co/wasabihu/xerj-bilingual-fin-law-384)** | 384-dim bilingual (CJK/EN) financial, statutory & clinical embedding model (FP32/FP16 ONNX + native XERJ Candle `safetensors`), reaching 92.0% R@1 / 100% R@5 in XERJ `rc.105` native hybrid search. | `MIT` |
+| **[VeriCorpus-Reranker-0.6B](https://huggingface.co/wasabihu/VeriCorpus-Reranker-0.6B)** | Clean-room bilingual financial/legal/clinical cross-encoder reranker (`Qwen3-Reranker-0.6B` fine-tune): 1.0000 Top-1 / MRR & 0.9833 StrictCal on 240 zero-leakage groups. | `Apache-2.0` |
+
 ---
 
 *Focus areas: AI Agents · Verified RAG & Corpora · MCP · Playwright / Browser Automation · LLM Verification · Python*
