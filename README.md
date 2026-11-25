@@ -46,6 +46,14 @@ sessfork ──► XERJ + kbwall ──► claimcite
 | **[xerj-bilingual-fin-law-384](https://huggingface.co/wasabihu/xerj-bilingual-fin-law-384)** | **384d bilingual CJK/EN embeddings** — FP32/FP16 ONNX + native XERJ Candle `safetensors`, reaching 92.0% R@1 / 100% R@5 in XERJ `rc.105` hybrid search. | `MIT` |
 | **[VeriCorpus-Reranker-0.6B](https://huggingface.co/wasabihu/VeriCorpus-Reranker-0.6B)** | **Clean-room bilingual reranker** — `Qwen3-Reranker-0.6B` fine-tune hitting 1.0000 Top-1 / MRR & 0.9833 StrictCal on 240 zero-leakage groups. | `Apache-2.0` |
 
+### Upstream Contributions & Ecosystem
+
+- **[xerj-org/xerj](https://github.com/xerj-org/xerj)** — **Rust search & RAG engine** (ecosystem partner for `kbwall` & `vericorpus`): snapshot `fsync` batching ([#3457](https://github.com/xerj-org/xerj/pull/3457)), unmapped sub-field query fix ([#3527](https://github.com/xerj-org/xerj/pull/3527)), and CJK statutory & clinical reference corpora merged into XERJ Hub ([#3372](https://github.com/xerj-org/xerj/pull/3372)).
+- **[lexmount/moli](https://github.com/lexmount/moli)** — **Rust headless browser** (dual-engine runtime for `sessfork`): mouse event `click_count` fidelity ([#3470](https://github.com/lexmount/moli/pull/3470)).
+- **[d2lang/d2](https://github.com/d2lang/d2)** — **Declarative diagramming language**: `prefers-reduced-motion` accessibility support for animated SVG connections ([#2976](https://github.com/d2lang/d2/pull/2976)).
+- **[ruvnet/ruflo](https://github.com/ruvnet/ruflo)** — **Vector memory durability**: atomic `hnsw.metadata.json` writes with surfaced failure handling ([#5001](https://github.com/ruvnet/ruflo/pull/5001)).
+- **[a-r-j/graphein](https://github.com/a-r-j/graphein)** — **Graph ML CLI**: built-in default configuration presets ([#521](https://github.com/a-r-j/graphein/pull/521)).
+
 ---
 
 *Focus areas: Rust & Python · Local-First AI Agents · MCP · Verified RAG & Corpora · Citation Verification · Browser-Local Privacy*
