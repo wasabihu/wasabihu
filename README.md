@@ -5,13 +5,10 @@ Building local-first **AI Agent infrastructure**, **audit-grade RAG corpora**, *
 ### Composable Evidence Loop
 
 ```text
-1. sessfork       Chrome auth capture + pre-write redaction (0 focus theft)
-      │
-      ▼
-2. XERJ + kbwall  Air-gapped Rust MCP · sub-5ms hybrid search · xerj:// URIs
-      │
-      ▼
-3. claimcite      Zero-dep span & citation verification against source text
+sessfork ──► XERJ + kbwall ──► claimcite
+│            │                 └─ Zero-dep span & citation verification
+│            └─ Air-gapped Rust MCP · sub-5ms hybrid search · xerj:// URIs
+└─ Chrome auth capture + pre-write redaction (zero window focus theft)
 ```
 
 **Powered by clean-room Hugging Face models:** [xerj-bilingual-fin-law-384](https://huggingface.co/wasabihu/xerj-bilingual-fin-law-384) (`384d`, `MIT`) · [VeriCorpus-Reranker-0.6B](https://huggingface.co/wasabihu/VeriCorpus-Reranker-0.6B) (`Apache-2.0`)
