@@ -12,9 +12,9 @@ sessfork (Rust CDP MCP) ──► XERJ + kbwall ──► claimcite
 ```
 
 > **Verified `sessfork-mcp` Numbers** *(~816 KiB single Rust binary, zero Node.js, reproducible locally)*:
-> - **`-90.7%` RAM (`226.3 MiB` vs `2,439.5 MiB`) & `2.76×` faster** on 12× Heavy-DOM (`1,775` nodes/tab) — independently reproduced by the [`lexmount/moli` team](https://github.com/lexmount/moli/discussions/3465#discussioncomment-19846839) (Apple M4 24 GB, 5-run medians).
-> - **`-27.5%` RAM (`-747.8 MB`) & `1.54×` faster on identical `chrome-headless-shell`** via `--cdp-url` (`3.2 ms` vs `1,240.4 ms` cold `initialize`) — pure MCP wrapper savings without switching browser engines.
-> - **`100/100` hot-reload soak** (`0.85 ms` p50, Rust wrapper pinned flat at `2.8 MB`), **`0` surviving orphans on `SIGKILL` / Win32 Job Object**, and **`14/14` live adversarial security probes** ([Benchmarks](https://github.com/wasabihu/sessfork/blob/main/docs/benchmarks.md) · [Security Audit](https://github.com/wasabihu/sessfork/blob/main/docs/security-report.md)).
+> - **`-90.7%` RAM (`226.3 MiB` vs `2,439.5 MiB`) & `2.76×` faster** on 12× Heavy-DOM (`1,775` nodes/tab) — independently reproduced by the [`lexmount/moli` team](https://github.com/lexmount/moli/discussions/3465#discussioncomment-19846839) (Apple M4 24 GB, 5-run medians); scales to **48× Heavy-DOM (`85.2K` DOM nodes) in `625.8 MB` vs `8,752.2 MB` (`13.99×` smaller / `-92.8%`)**.
+> - **16 Parallel Independent Agents (`48` Heavy-DOM tasks):** `moli` + Rust hits **`38.55 tasks/s` in `1.69 GB`** vs `chrome` + Node `@playwright/mcp` at `10.53 tasks/s` in **`10.63 GB`** (**`3.66×` throughput, `-84.1%` RAM**); even on **identical Chrome via `--cdp-url`**, Rust cuts 48× Heavy-DOM time by **`1.98×`** (`-1.98 GB` RAM) and 16-agent swarm RAM by **`-56.6%` (`-6.01 GB`)**.
+> - **`500/500` hot-reload soak** (`0.82 ms` p50, Rust wrapper pinned flat at `2.9 MB`), **`0` surviving orphans on `SIGKILL` / Win32 Job Object**, and **`14/14` live adversarial security probes** ([Benchmarks](https://github.com/wasabihu/sessfork/blob/main/docs/benchmarks.md) · [Security Audit](https://github.com/wasabihu/sessfork/blob/main/docs/security-report.md)).
 
 **Powered by clean-room Hugging Face models:** [xerj-bilingual-fin-law-384](https://huggingface.co/wasabihu/xerj-bilingual-fin-law-384) (`384d`, `MIT`) · [VeriCorpus-Reranker-0.6B](https://huggingface.co/wasabihu/VeriCorpus-Reranker-0.6B) (`Apache-2.0`)
 
